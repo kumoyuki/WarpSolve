@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Citizen Scientist 4 - NP Fortune and 3SAT Glory</title>
+</head>
+<body>
+    <h1>Citizen Scientist 4 - NP Fortune and 3SAT Glory</h1>
+
+    <h2>The Problem and Its Reward</h2>
+    <p>Here's twenty numbers: 3 6 10 12 17  19 34 52 51 64   73 77 81 92 105   117 118 121 125.  Which of them, if any, if added up, would total 169?  If that feels like a hard 
+        problem to solve, you're not alone.  This problem is called SUBSET-SUM, and it is one of many in a class of problems, called decision problems, that are notoriously difficult to exactly solve.  
+        It seems like you have to go through all the combinations to do it, while you might think computers should have no problems with that, progressively larger lists of 
+        numbers have too many combinations for computers to solve by brute force alone.  
+    </p>
+    <p>There's many examples of these decision problems. There's Travelling Salesman - what's the shortest route to tour some number of cities.  There's the cutting problem - if I need 
+        some pieces of board cut up, what's the most efficient way to get the pieces that I need.  Even the cryptography used to ensure the identity of a website or protect a program from tampering, 
+        is thought to be related.  It turns out that researchers, Cook and Levin, showed that all of these problems are related in a fundamental way. If you could create a routine to solve
+        any one of them, it could be used to solve them all.  
+    </p>
+    <p>No one has done so, and many serious computer scientists actually think it is impossible.  There's a lot of motivation to come up with something.  Not only for science, but for sheer money - such 
+        a discovery would open the door to computer programs that could do things we think of today as impossible. And, there's big prizes as well.  There's a shot at the Nobel, there's the <a href="http://www.claymath.org/millennium/P_vs_NP/">a million dollar reward</a>,
+        and numerous other smaller awards and recognitions in the industry.
+    </p>
+    <p>Wait... did someone say million dollar reward?  What's a Citizen Scientist to Do?  Dang I have to pay my electric bill - some coin would surely help!</p>
+
+    <h2>Introduction to 3SAT</h2>
+    <p>Money money money, I dream of the sound of clinking krugerands as my wife and I pile the kids into an inflatable pirate ship sailing underneath the sprays of my pool.  
+    But how do I get there?  First, we have to pick a problem.   As I was writing, there's a bunch of different kinds problems that are related, and all you have to do is write a routine that can solve one and 
+        in such a way that it can be re-used to solve other problems.  For this prize quest, I am starting with 3SAT, largely because it is most mappable to an idea 
+        I'd already dabbled with.
+    </p>    
+
+    <p>3SAT is pretty simple to describe. Those of you with some computer experience know boolean expressions.  We might write if ((A or B or C) and (X or !A)), to say, if this condition 
+        is true, then do something. Satisfiability or SAT, is the opposite of that. We would look at that expression, and try to figure out, what variable assignments would make that true.
+        That expression, with its variables figured out, is said to be "satisfied", get it?  These complexity problems all have this simple pattern - one is, doing something simple, like 
+        add up a few numbers, evaluate a boolean expression, and then an opposite, which is thought to be hard. 3SAT is just a case of satisfiability - technically it means Satisfiability for expressions 
+        in the 3 Conjunctive Normal Form, but really, just think some variable number of clauses anded together,  and each clause has three variables in it, or'd together. 
+    </p>
+
+    <p>3SAT means solve expressions that look this:</p>
+    <pre>
+        (A or B or C) and (!C or D or E) 
+        (A or B or !D) and (!D or E or F) and (!B or A or F)
+        (A or D or !E) and (!F or B or C) and (!B or !A or F) and (!D or E or F) and (!D or !E or !B)
+    </pre>
+
+    <h2>A Join Based Approach</h2>
+    <p></p>
+
+</body>
+</html>
