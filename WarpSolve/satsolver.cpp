@@ -48,7 +48,8 @@ namespace satsolver {
 				distincts[ nm ].push_back( i );
 			}
 
-			// given the distinct variables, build up a table for this clause that has only rows of variables whose assignments satisfy this clause
+			// given the distinct variables, build up a table for this clause that 
+            // has only rows of variables whose assignments satisfy this clause
 			warpsolve::solutionIterator siter = warpsolve::solutionIterator::begin( variableNames, 1 );
 			
 			// for debugging
@@ -64,7 +65,8 @@ namespace satsolver {
 					for (auto si : s.variablesAndValues) {
 						for (auto sk = distincts[ si.first ].begin(); sk != distincts[ si.first ].end(); sk++) {
 							// mark the variables that will be added to the row of the table... 
-							// but, only if the free variables, that is, those with no dependency, would satisfy the clause on their own.
+							// but, only if the free variables, that is, those with no dependency,
+                            // would satisfy the clause on their own.
 							sat3::boolInst& bi = cl.bools[ *sk ];
 							if (bi.isAlone && (( bi.notted && si.second == true ) ||( !bi.notted && !si.second )))
 								doAdd = false;
