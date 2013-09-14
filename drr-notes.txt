@@ -1,0 +1,26 @@
+-*- mode: outline -*-
+
+* verify/preparing to publish
+** instrument all loops with counters, output statistics
+** print & scribble
+** recode in Agda (or some other proof system)
+** how to share article collection
+** fast3satsolver.html shows DNF
+
+* DNF or CNF and conversion from General SAT
+** SAT in general has many answers for a given constraint set
+** DNF is && | && | && = OR of ANDs
+** CNF is || & || & || = AND of ORs
+** Complexity
+*** General SAT is NP complete
+**** NP-completeness only refers to the run-time of the worst case instances. Many of the instances that occur in practical applications can be solved much more quickly
+*** conversion from general SAT to DNF is NP complete
+*** 3SAT is on CNF and is NP complete
+**** e^n where n is the number of disjuncts 
+*** 3SAT on DNF is P
+*** conversion from SAT to 3CNF
+**** is polynomial time
+**** preserves number of answers by "Cook's Reduction"
+*** conversion from SAT to 3DNF
+**** is exponential time
+**** DNF is solvable in polynomial time
