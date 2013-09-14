@@ -120,3 +120,6 @@ namespace warpsolve
 	}
 
 };
+// Local Variables:
+// tab-width: 4
+// End:

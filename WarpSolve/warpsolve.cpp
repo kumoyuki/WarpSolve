@@ -373,26 +373,7 @@ namespace warpsolve {
 
 		return s;
 	}
-		
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
+// Local Variables:
+// tab-width: 4
+// End:

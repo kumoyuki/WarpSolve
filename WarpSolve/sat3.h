@@ -101,3 +101,6 @@ namespace sat3 {
 #endif
 
 
+// Local Variables:
+// tab-width: 4
+// End:
