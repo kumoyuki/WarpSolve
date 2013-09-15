@@ -11,6 +11,8 @@
 
 using namespace Heureka;
 using namespace sat3;
+using namespace satsolver;
+
 
 bool add_clause(cnfExpression& exp, const List& l) { return false; }
 bool add_clause(cnfExpression& exp, const Num& l) { return false; }
@@ -55,5 +57,12 @@ void solveExplicit(const char* v) {
     if(err != std::end(clauses)) {
         fprintf(stderr, "error in clause %d\n", err - std::begin(clauses));
         return; }
+
+    sat3solver solver;
+    auto solution = solver.solve(exp);
+    if(solution.valid)
+        fprintf(stdout, "solution: %s\n", solution.toString().c_str());
+    else
+        fprintf(stdout, "no solution\n");
 
     return; }

@@ -1,4 +1,4 @@
-CXX = gcc -std=gnu++11
+CXX = gcc -std=gnu++11 -g
 
 LIB_SRCS := \
 	sat3.cpp \
@@ -21,3 +21,4 @@ libsat.a : $(LIB_OBJS)
 
 
 WarpSolve: $(MAIN_OBJS) libsat.a
+	$(CXX) -o WarpSolve $(MAIN_SRCS) libsat.a
