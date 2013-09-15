@@ -1,5 +1,6 @@
 # gcc
 *.o
+*.a
 
 # VS
 *.suo

@@ -16,7 +16,7 @@ MAIN_OBJS := $(MAIN_SRCS:.cpp=.o)
 
 
 libsat.a : $(LIB_OBJS)
-	ar -rcsv $@g $(LIB_OBJS)
+	ar -rcsv $@ $(LIB_OBJS)
 
 
 WarpSolve: $(MAIN_OBJS) libsat.a
