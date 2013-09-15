@@ -13,9 +13,11 @@ All Rights Reserved
 #define __debugbreak() do{}while(false)
 #endif
 
-#include <iostream>
 #include "solution.h"
 #include "satsolver.h"
+#include "explicit.h"
+
+#include <iostream>
 #include <cstring>
 
 void solutionIterationTest();
@@ -40,7 +42,10 @@ int main( int argc, char **argv)
 			cnfSolvingRealTests();
 		} else if (_stricmp( argv[i], "-cnffindfailure" ) == 0) {
 			cnfFindFailure();
-		} 
+        } else if (_stricmp( argv[i], "-explicit" ) == 0) {
+            solveExplicit( argv[i+1] );
+            argv += 1;
+        }
 	}
 }
 

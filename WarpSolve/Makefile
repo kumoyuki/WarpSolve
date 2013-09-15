@@ -9,6 +9,7 @@ LIB_SRCS := \
 LIB_OBJS := $(LIB_SRCS:.cpp=.o)
 
 MAIN_SRCS := \
+	explicit.cpp \
 	main.cpp \
 	SExp.cpp
 
