@@ -1,0 +1,6 @@
+# gcc
+*.o
+
+# VS
+*.suo
+*.user
