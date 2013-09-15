@@ -6,9 +6,15 @@ All Rights Reserved
 
 ****************************************************************************************************/
 
+#if defined(WINVER)
+#include "conio.h"
+#else
+#define _stricmp strcasecmp
+#define __debugbreak() do{}while(false)
+#endif
+
 #include <iostream>
 #include "solution.h"
-#include "conio.h"
 #include "satsolver.h"
 #include <cstring>
 

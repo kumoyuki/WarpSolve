@@ -8,6 +8,15 @@ LIB_SRCS := \
 
 LIB_OBJS := $(LIB_SRCS:.cpp=.o)
 
+MAIN_SRCS := \
+	main.cpp \
+	SExp.cpp
+
+MAIN_OBJS := $(MAIN_SRCS:.cpp=.o)
+
 
 libsat.a : $(LIB_OBJS)
-	ar -rcsv libsat.a $(LIB_OBJS)
+	ar -rcsv $@g $(LIB_OBJS)
+
+
+WarpSolve: $(MAIN_OBJS) libsat.a

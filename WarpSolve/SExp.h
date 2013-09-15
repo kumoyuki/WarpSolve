@@ -1,4 +1,11 @@
 // -*- c++ -*-
+// (C) 2013 David Richard Rush and Heureka Software
+// http://cyber-rush.org.drr
+// mailto:kumoyuki@gmail.com
+//
+// Permission to use is freely granted along with the inclusion of
+// this copyright notice in all derivative works.
+//
 #pragma once
 
 #include <memory>

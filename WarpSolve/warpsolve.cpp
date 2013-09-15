@@ -103,7 +103,7 @@ namespace warpsolve {
 		// in the future we could do a hash join, but this nested loops should get the job done for the moment
 		// first, find matching columns
 
-		std::list< std::pair<int, int> >& matchingColumns = getMatchingColumns( _dest );
+		const std::list< std::pair<int, int> >& matchingColumns = getMatchingColumns( _dest );
 
 		if (matchingColumns.size() == 0) {
 			return true;
